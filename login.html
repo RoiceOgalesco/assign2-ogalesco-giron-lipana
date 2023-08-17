@@ -5,6 +5,16 @@ To Do: Implement submit and cancel functionality
 -->
 <html>
 <head>
+    <script>
+        function onLoginBtnClick(){
+        alert(document.getElementById("txtUsername").value)
+        alert(document.getElementById("txtPassword").value);
+        }
+        function onClearBtnClick(){
+        document.getElementById("txtUsername").value = ""
+        document.getElementById("txtPassword").value = ""
+        }
+    </script>
 <style>
     body 
     {
@@ -91,8 +101,8 @@ To Do: Implement submit and cancel functionality
 </div>
 
 <div class = "button-container">
-    <button style = "margin: 0 10px;" id="btnSubmit"> SUBMIT </button>
-    <button style = "margin: 0 10px;" id="btnCancel"> CANCEL </button>
+    <button type ="submit" onClick="onLoginBtnClick()" style = "margin: 0 10px;" id="btnSubmit"> LOGIN </button>
+    <button type="button" onClick="onClearBtnClick()" style = "margin: 0 10px;" id="btnCancel"> CLEAR </button>
 </div>
 
 </body>
