@@ -9,12 +9,12 @@
 <head>
     <script>
         function onLoginBtnClick(){
-        alert(document.getElementById("txtUsername").value);
-        alert(document.getElementById("txtPassword").value);
+        alert(document.getElementById("username").value);
+        alert(document.getElementById("password").value);
         }
         function onClearBtnClick(){
-        document.getElementById("txtUsername").value = "";
-        document.getElementById("txtPassword").value = "";
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
         }
     </script>
     
@@ -89,13 +89,13 @@
 <div class = "form-container">
     <form>
         <div class = "form-row">
-         <label class = "form-label" for = "txtUsername"><b>Username:</b></label>
-         <input class="form-input" type="text" id="txtUsername" name="Username">
+         <label class = "form-label" for = "username"><b>Username:</b></label>
+         <input class="form-input" type="text" id="username" name="Username">
         </div>
 
         <div class = "form-row">
-         <label class = "form-label" for = "txtPassword"><b>Password:</b></label>
-         <input class="form-input" type="text" id="txtPassword" name="Password">
+         <label class = "form-label" for = "password"><b>Password:</b></label>
+         <input class="form-input" type="text" id="password" name="Password">
         </div>
     </form>
 </div>
