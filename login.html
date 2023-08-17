@@ -4,8 +4,20 @@
     To Do: Implement submit and cancel functionality
 -->
 
+
 <html>
 <head>
+    <script>
+        function onLoginBtnClick(){
+        alert(document.getElementById("username").value);
+        alert(document.getElementById("password").value);
+        }
+        function onClearBtnClick(){
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+        }
+    </script>
+    
 <style>
     body 
     {
@@ -77,20 +89,20 @@
 <div class = "form-container">
     <form>
         <div class = "form-row">
-         <label class = "form-label" for = "Username"><b>Username:</b></label>
-         <input class="form-input" type="text" id="Username" name="Username">
+         <label class = "form-label" for = "username"><b>Username:</b></label>
+         <input class="form-input" type="text" id="username" name="Username">
         </div>
 
         <div class = "form-row">
-         <label class = "form-label" for = "Password"><b>Password:</b></label>
-         <input class="form-input" type="text" id="Password" name="Password">
+         <label class = "form-label" for = "password"><b>Password:</b></label>
+         <input class="form-input" type="text" id="password" name="Password">
         </div>
     </form>
 </div>
 
 <div class = "button-container">
-    <button style = "margin: 0 10px;"> Submit </button>
-    <button style = "margin: 0 10px;"> Cancel </button>
+    <button type = "submit" onClick="onLoginBtnClick()"style = "margin: 0 10px;"> Login </button>
+    <button type = "button" onClick="onClearBtnClick()" style = "margin: 0 10px;"> Clear </button>
 </div>
 
 </body>
