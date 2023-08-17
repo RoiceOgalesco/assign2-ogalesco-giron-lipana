@@ -9,13 +9,13 @@
 
     <script>
         function onLoginBtnClick() {
-            const errorMsg = "INCOMPLETE LOGIN DETAILS";
             var username = document.getElementById("username").value.trim();
-            let isUsernameEmpty = true;
+            var isUsernameEmpty = true;
+            let errorMsg = "INCOMPLETE LOGIN DETAILS";
             if (username.length === 0) {
-                let isUsernameEmpty = true;
-                alert(errorMsg);
-                errorMsg = "ERROR: Either the username or the password were not provided. Please try again.";
+                 isUsernameEmpty = true;
+                 errorMsg = "ERROR: Either the username or the password were not provided. Please try again.";
+                 alert(errorMsg);
             } else {
                 isUsernameEmpty = false;
             }
