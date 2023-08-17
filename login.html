@@ -4,8 +4,20 @@
     To Do: Implement submit and cancel functionality
 -->
 
+
 <html>
 <head>
+    <script>
+        function onLoginBtnClick(){
+        alert(document.getElementById("txtUsername").value);
+        alert(document.getElementById("txtPassword").value);
+        }
+        function onClearBtnClick(){
+        document.getElementById("txtUsername").value = "";
+        document.getElementById("txtPassword").value = "";
+        }
+    </script>
+    
 <style>
     body 
     {
@@ -78,19 +90,19 @@
     <form>
         <div class = "form-row">
          <label class = "form-label" for = "Username"><b>Username:</b></label>
-         <input class="form-input" type="text" id="Username" name="Username">
+         <input class="form-input" type="text" id="txtUsername" name="Username">
         </div>
 
         <div class = "form-row">
          <label class = "form-label" for = "Password"><b>Password:</b></label>
-         <input class="form-input" type="text" id="Password" name="Password">
+         <input class="form-input" type="text" id="txtPassword" name="Password">
         </div>
     </form>
 </div>
 
 <div class = "button-container">
-    <button style = "margin: 0 10px;"> Submit </button>
-    <button style = "margin: 0 10px;"> Cancel </button>
+    <button type = "submit" onClick="onLoginBtnClick()"style = "margin: 0 10px;"> Login </button>
+    <button type = "button" onClick="onClearBtnClick()" style = "margin: 0 10px;"> Clear </button>
 </div>
 
 </body>
