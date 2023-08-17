@@ -4,106 +4,110 @@
     To Do: Implement submit and cancel functionality
 -->
 
-
 <html>
 <head>
+
     <script>
-        function onLoginBtnClick(){
-        alert(document.getElementById("username").value);
-        alert(document.getElementById("password").value);
+        function onLoginBtnClick() {
+            var username = document.getElementById("username").value.trim();
+            var isUsernameEmpty = true;
+            if (username.length === 0) {
+                var isUsernameEmpty = true;
+            } else {
+                isUsernameEmpty = false;
+            }
+            console.log("isUsernameEmpty=", isUsernameEmpty);
         }
-        function onClearBtnClick(){
-        document.getElementById("username").value = "";
-        document.getElementById("password").value = "";
+
+        function onClearBtnClick() {
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = "";
         }
     </script>
+
+    <style>
+        body 
+        {
+            display: flex;
+            font-family: Tahoma;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+        }
     
-<style>
-    body 
-    {
-        display: flex;
-        font-family: Tahoma;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
-        background-color: #ffffff;
-    }
-
-    th, td 
-    {
-        border: 2px solid #000000;
-        padding: 14px;
-        text-align: center;
-    }
-
-    th 
-    {
-        background-color: #000000;
-        color: #ffffff;
-    }
-
-    .header-container 
-    {
-        color: #000000;
-        top: 10px;
-    }
-
-    .form-container 
-    {
-        background-color: #000000;
-        color: #ffffff;
-        width: 40%;
-        padding: 15px;
-        margin-top: 15px;
-    }
-
-    .form-row 
-    {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-    }
-
-    .form-label 
-    {
-        flex-basis: 30%;
-        text-align: left;
-        padding-right: 5px;
-    }
-
-    .form-input 
-    {
-        flex-grow: 1;
-        padding: 6px;
-    }
-
-    .button-container {
-        margin-top: 20px;
-    }
-</style>
+        th, td 
+        {
+            border: 2px solid #000000;
+            padding: 14px;
+            text-align: center;
+        }
+    
+        th 
+        {
+            background-color: #000000;
+            color: #ffffff;
+        }
+    
+        .header-container 
+        {
+            color: #000000;
+            top: 10px;
+        }
+    
+        .form-container 
+        {
+            background-color: #000000;
+            color: #ffffff;
+            width: 40%;
+            padding: 15px;
+            margin-top: 15px;
+        }
+    
+        .form-row 
+        {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    
+        .form-label 
+        {
+            flex-basis: 30%;
+            text-align: left;
+            padding-right: 5px;
+        }
+    
+        .form-input 
+        {
+            flex-grow: 1;
+            padding: 6px;
+        }
+    
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+   
 </head>
-
-
-<div class = "form-container">
-    <form>
-        <div class = "form-row">
-         <label class = "form-label" for = "username"><b>Username:</b></label>
-         <input class="form-input" type="text" id="username" name="Username">
-        </div>
-
-        <div class = "form-row">
-         <label class = "form-label" for = "password"><b>Password:</b></label>
-         <input class="form-input" type="text" id="password" name="Password">
-        </div>
-    </form>
-</div>
-
-<div class = "button-container">
-    <button type = "submit" onClick="onLoginBtnClick()"style = "margin: 0 10px;"> Login </button>
-    <button type = "button" onClick="onClearBtnClick()" style = "margin: 0 10px;"> Clear </button>
-</div>
-
+<body>
+    <div class="form-container">
+        <form>
+            <div class="form-row">
+                <label class="form-label" for="username"><b>Username:</b></label>
+                <input class="form-input" type="text" id="username" name="Username">
+            </div>
+            <div class="form-row">
+                <label class="form-label" for="password"><b>Password:</b></label>
+                <input class="form-input" type="text" id="password" name="Password">
+            </div>
+        </form>
+    </div>
+    <div class="button-container">
+        <button type="submit" onClick="onLoginBtnClick()" style="margin: 0 10px;">Login</button>
+        <button type="button" onClick="onClearBtnClick()" style="margin: 0 10px;">Clear</button>
+    </div>
 </body>
 </html>
