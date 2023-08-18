@@ -8,13 +8,23 @@
 <html>
 <head>
     <script>
-        function onLoginBtnClick(){
-        alert(document.getElementById("username").value);
-        alert(document.getElementById("password").value);
+        function onLoginBtnClick() {
+            let errorMsg = "INCOMPLETE LOGIN DETAILS";
+            var username = document.getElementById("username").value.trim();
+            var isUsernameEmpty = true;
+            if (username.length === 0) {
+                isUsernameEmpty = true;
+                errorMsg = "ERROR: Either the username or the password were not provided. Please try again.";
+                alert(errorMsg);
+            } else {
+                isUsernameEmpty = false;
+            }
+            console.log("isUsernameEmpty=", isUsernameEmpty);
         }
-        function onClearBtnClick(){
-        document.getElementById("username").value = "";
-        document.getElementById("password").value = "";
+
+        function onClearBtnClick() {
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = "";
         }
     </script>
     
