@@ -1,0 +1,109 @@
+<!--
+Author: Roice Vian S. Ogalesco
+Comment: Javascript implementation will be prioritized. CSS to follow
+To Do: Implement submit and cancel functionality
+-->
+<html>
+<head>
+    <script>
+        function onLoginBtnClick(){
+        alert(document.getElementById("txtUsername").value)
+        alert(document.getElementById("txtPassword").value);
+        }
+        function onClearBtnClick(){
+        document.getElementById("txtUsername").value = ""
+        document.getElementById("txtPassword").value = ""
+        }
+    </script>
+<style>
+    body 
+    {
+        display: flex;
+        font-family: Tahoma;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #ffffff;
+    }
+
+    th, td 
+    {
+        border: 2px solid #2e465c;
+        padding: 14px;
+        text-align: center;
+    }
+
+    th 
+    {
+        background-color: #2e465c;
+        color: #ffffff;
+    }
+
+    .header-container 
+    {
+        color: #2e465c;
+        top: 10px;
+    }
+
+    .form-container 
+    {
+        background-color: #2e465c;
+        color: #ffffff;
+        width: 40%;
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .form-row 
+    {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .form-label 
+    {
+        flex-basis: 30%;
+        text-align: left;
+        padding-right: 5px;
+    }
+
+    .form-input 
+    {
+        flex-grow: 1;
+        padding: 6px;
+    }
+
+    .button-container {
+        margin-top: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+    </table>
+<div class = "form-container">
+    <form>
+        <div class = "form-row">
+         <label class = "form-label" for = "ID"><b>USERNAME</b></label>
+         <input class="form-input" type="text" id="txtUsername" name="USERNAME">
+        </div>
+
+        <div class = "form-row">
+         <label class = "form-label" for = "STUDENT NUMBER"><b>PASSWORD</b></label>
+         <input class="form-input" type="text" id="txtPassword" name="PASSWORD">
+        </div>
+
+    </form>
+</div>
+
+<div class = "button-container">
+    <button type ="submit" onClick="onLoginBtnClick()" style = "margin: 0 10px;" id="btnSubmit"> LOGIN </button>
+    <button type="button" onClick="onClearBtnClick()" style = "margin: 0 10px;" id="btnCancel"> CLEAR </button>
+</div>
+
+</body>
+</html>

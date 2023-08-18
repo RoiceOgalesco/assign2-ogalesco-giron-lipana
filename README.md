@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 THIS IS MAIN
+=======
+THIS IS DEVELOP
+>>>>>>> 44340a8321ddc72a9b313831777c5b7c6bbc3dc9
