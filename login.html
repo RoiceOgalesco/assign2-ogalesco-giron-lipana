@@ -7,10 +7,13 @@ To Do: Implement submit and cancel functionality
 <head>
     <script>
         function onLoginBtnClick(){
+        const errorMsg = "INCOMPLETE LOGIN DETAILS";
         var username = document.getElementById("txtUsername").value.trim();
         var isUsernameEmpty = true;
         if(username.length === 0){
         var isUsernameEmpty = true;
+        alert(errorMsg);
+        errorMsg = "ERROR: Either the username or the password were not provided. Please try again."
         } else {
         isUsernameEmpty = false;
         }
