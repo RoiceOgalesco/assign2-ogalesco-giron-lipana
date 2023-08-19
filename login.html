@@ -8,16 +8,23 @@ To Do: Implement submit and cancel functionality
 <head>
 
     <script>
+        const errorMsg = "ERROR: Either the username or the password were not provided. Please try again";
+        
         function onLoginBtnClick()
         {
-            alert(document.getElementById("txtUsername").value);
-            alert(document.getElementById("txtPassword").value);
-        }
-        
-        function onClearBtnClick()
-        {
-            document.getElementById("txtUsername").value = "";
-            document.getElementById("txtPassword").value = "";
+            var username = document.getElementById("txtUsername").value.trim();
+            var isUsernameEmpty = true;
+            
+            if(username.length === 0)
+            {
+                var isUsernameEmpty = true;
+                alert(errorMsg);
+            } 
+            else 
+            {
+                isUsernameEmpty = false;
+            }
+            console.log("isUsernameEmpty=", isUsernameEmpty);
         }
     </script>
 
